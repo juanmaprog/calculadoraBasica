@@ -4,7 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>Calculadora básica</title>
   </head>
-  <body></body>
+  <body onload="init();">
+    <div id="l-main">
+
+    
+    <div class="calc">
+      <div class="calc-display">
+        <div class="content">12.789,12</div>
+      </div>
+
+      <!-- BOTONES -->
+      <div class="calc-buttons">
+
+        <!-- PRIMER BLOQUE -->
+        <button id="reset">C</button>
+        <button id="change-sign-button"><sup id="change-sign-button-plus">+</sup>⁄<subid="change-sign-button-minus">-</sub></button>
+        <button id="porcentaje">%</button>
+        <button id="divide-button">÷</button>
+
+        <!-- SEGUNDO BLOQUE -->
+        <button id="seven-button" class="calc-buttons-square" data-value="7">7</button>
+        <button id="eight-button" data-value="8">8</button>
+        <button id="nine-button" data-value="9">9</button>
+        <button id="multiply-button" class="calc-buttons-operation">×</button>
+
+        <!-- TERCER BLOQUE -->
+        <button id="four-button" class="calc-buttons-square" data-value="4">4</button>
+        <button id="five-button" data-value="5">5</button>
+        <button id="six-button" data-value="6">6</button>
+        <button id="subtract-button" class="calc-buttons-operation">-</button>
+
+        <!-- CUARTO BLOQUE -->
+        <button id="one-button" class="calc-buttons-square" data-value="1">1</button>
+        <button id="two-button" data-value="2">2</button>
+        <button id="three-button" data-value="3">3</button>
+        <button id="add-button" class="calc-buttons-operation">+</button>
+
+        <!-- QUINTO BLOQUE -->
+        <button id="zero-button" data-value="0">0</button>
+        <button id="decimal-button" class="calc-buttons-square">,</button>
+        <button id="equals-button">=</button>
+
+      </div>
+    </div>
+    </div>
+
+    <!-- TABLA -->
+    <table class="calculadora">
+      <!-- <tr>
+        <td colspan="2"><span id="resultado"></span></td>
+      </tr> -->
+      <!-- <tr>
+        <td><button class="reset">C</button></td>
+        <td><button class="masmenos">+-</button></td>
+        <td><button class="porcentaje">%</button></td>
+        <td><button class="dividir">dividir</button></td>
+      </tr>
+      <tr>
+        <td><button class="siete">7</button></td>
+        <td><button class="ocho">8</button></td>
+        <td><button class="nueve">9</button></td>
+        <td><button class="por">X</button></td>
+      </tr>
+      <tr>
+        <td><button class="cuatro">4</button></td>
+        <td><button class="cinco">5</button></td>
+        <td><button class="seis">6</button></td>
+        <td><button class="menos">-</button></td>
+      </tr>
+      <tr>
+        <td><button class="uno">1</button></td>
+        <td><button class="dos">2</button></td>
+        <td><button class="tres">3</button></td>
+        <td><button class="mas">+</button></td>
+      </tr>
+      <tr>
+        <td><button class="cero">0</button></td>
+        <td><button class="coma">,</button></td>
+        <td><button class="igual">=</button></td>
+      </tr> -->
+      <!-- <tr>
+        <td><button id="siete">7</button></td>
+        <td><button id="ocho">8</button></td>
+        <td><button id="nueve">9</button></td>
+        <td><button id="division">/</button></td>
+      </tr> -->
+      <!-- <tr>
+        <td><button id="cuatro">4</button></td>
+        <td><button id="cinco">5</button></td>
+        <td><button id="seis">6</button></td>
+        <td><button id="multiplicacion">*</button></td>
+      </tr> -->
+      <!-- <tr>
+        <td><button id="uno">1</button></td>
+        <td><button id="dos">2</button></td>
+        <td><button id="tres">3</button></td>
+        <td><button id="resta">-</button></td>
+      </tr> -->
+      <!-- <tr>
+        <td><button id="igual">=</button></td>
+        <td><button id="reset">C</button></td>
+        <td><button id="cero">0</button></td>
+        <td><button id="suma">+</button></td>
+      </tr> -->
+    </table>
+
+    <!-- Llamada al js -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
