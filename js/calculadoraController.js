@@ -8,6 +8,7 @@ const display = document.getElementById("display");
 
 // FUNCIONES
 function setDisplayValue(value) {
+  // TODO: Disminuir el tamaño de lafuente para que no sobrepase el límite
   if (display.innerText == "0") {
     display.innerText = "";
     ultimoBoton = "";
