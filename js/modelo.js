@@ -2,33 +2,33 @@
 // ATENCIÓN: LA LÍNEA SIGUIENTE NO ESTÁ COMENTADA
 /*jshint esversion: 6 */
 
-const cal = {
-  reset,
-  masMenos,
-  porcentaje,
-  divivir,
+// const cal = {
+//   reset,
+//   masMenos,
+//   porcentaje,
+//   divivir,
 
-  siete,
-  ocho,
-  nueve,
-  por,
+//   siete,
+//   ocho,
+//   nueve,
+//   por,
 
-  cuatro,
-  cinco,
-  seis,
-  menos,
+//   cuatro,
+//   cinco,
+//   seis,
+//   menos,
 
-  uno,
-  dos,
-  tres,
-  mas,
+//   uno,
+//   dos,
+//   tres,
+//   mas,
 
-  cero,
-  punto,
-  igual,
+//   cero,
+//   punto,
+//   igual,
 
-  resultado,
-};
+//   resultado,
+// };
 
 // function getResultado() {
 //   return 0;

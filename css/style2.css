@@ -25,73 +25,28 @@ body {
     margin: 0px;
 }
 
-.content {
+#display {
     /* background-color: transparent; */
-    margin: 10px;
+    margin: 5px;
     font-size: 35px;
 }
 
 /* BOTONES */
 
-/* .calc-buttons .primer-bloque button {
-    flex-wrap: wrap;
+.btn-calc button {
+    /* display: flexbox;
+    flex-wrap: wrap; */
     margin: 0px;
     width: 60px;
     height: 60px;
-    font-size: 25px;
-    padding: 0px;
-}
-
-.calc-buttons .segundo-bloque button {
-    flex-wrap: wrap;
-    margin: 0px;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-    padding: 0px;
-}
-
-.calc-buttons .tercer-bloque button {
-    flex-wrap: wrap;
-    margin: 0px;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-    padding: 0px;
-}
-
-.calc-buttons .cuarto-bloque button {
-    flex-wrap: wrap;
-    margin: 0px;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-    padding: 0px;
-}
-
-.calc-buttons .quinto-bloque button {
-    flex-wrap: wrap;
-    margin: 0px;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-    padding: 0px;
-} */
-
-.calc-buttons button {
-    display: flexbox;
-    flex-wrap: wrap;
-    margin: 0px;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
+    font-size: 26px;
     /* font-weight: 100; */
     /* padding: 0px; */
     /* background: rgb(209, 209, 209); */
     /* border: 0.005vw solid rgb(158, 158, 158); */
     /* border: 0.000001vw solid gray; */
     /* border: 0.01px 0.01px solid gray; */
-     border:0.01px solid black;
+    /* border: 0vw 0vh solid black; */
     /*border: 0vw 0vh; */
     /* -webkit-tap-highlight-color: rgba(155, 58, 58, 0); */
     /* font-size: 3vw; */
@@ -101,38 +56,39 @@ body {
 
 /* BOTONES DERECHOS EN NARANJA */
 
-#divide-button {
+#dividir {
     background: orange;
     color: white;
 }
 
-#multiply-button {
+#multiplicar {
     background: orange;
     color: white;
 }
 
-#subtract-button {
+#restar {
     background: orange;
     color: white;
 }
 
-#add-button {
+#sumar {
     background: orange;
     color: white;
 }
 
-#equals-button {
+#igual {
     background: orange;
     color: white;
 }
 
-.calc-buttons-operation {
+.multiplicar {
     background: orange;
     color: white;
 }
 
-#zero-button {
-    /* background: orange; */
+/* BOTÓN CERO OCUPA DOS BOTONES */
+
+#cero {
     width: 124px;
 }
 
