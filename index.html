@@ -3,120 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <title>Calculadora básica</title>
+    <title>Calculadora iOS</title>
+
+    <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <script src="js/main.js"></script>
+    <!-- <script src="js/modelo.js"></script> -->
+    <!-- <script src="js/calculadoraController.js"></script> -->
+
+    <!-- Evitar que muestre el error por consola "favicon.ico 404 (Not Found)" -->
+    <link rel="shortcut icon" href="#" />
   </head>
-  <body onload="init();">
-    <div id="l-main">
-
-    
+  <body>
     <div class="calc">
+      <!-- DIPLAY -->
       <div class="calc-display">
-        <div class="content">12.789,12</div>
+        <a id="display">0</a>
       </div>
-
-      <!-- BOTONES -->
-      <div class="calc-buttons">
-
+      <div class="btn-calc" onclick="playClick();">
         <!-- PRIMER BLOQUE -->
-        <button id="reset">C</button>
-        <button id="change-sign-button"><sup id="change-sign-button-plus">+</sup>⁄<subid="change-sign-button-minus">-</sub></button>
-        <button id="porcentaje">%</button>
-        <button id="divide-button">÷</button>
+        <button id="reset" onclick="reset();">C</button>
+        <button id="cambiar-signo" onclick="cambiarSigno();">
+          <sup>+</sup>⁄<sub>-</sub>
+        </button>
+        <button id="porcentaje" onclick="porcentaje();">%</button>
+        <button id="dividir" onclick="dividir();">÷</button>
 
         <!-- SEGUNDO BLOQUE -->
-        <button id="seven-button" class="calc-buttons-square" data-value="7">7</button>
-        <button id="eight-button" data-value="8">8</button>
-        <button id="nine-button" data-value="9">9</button>
-        <button id="multiply-button" class="calc-buttons-operation">×</button>
+        <button id="siete" onclick="clickSiete();">
+          7
+        </button>
+        <button id="ocho" onclick="clickOcho();">8</button>
+        <button id="nueve" onclick="clickNueve();">9</button>
+        <button id="multiplicar" onclick="clickMultiplicar();">x</button>
 
         <!-- TERCER BLOQUE -->
-        <button id="four-button" class="calc-buttons-square" data-value="4">4</button>
-        <button id="five-button" data-value="5">5</button>
-        <button id="six-button" data-value="6">6</button>
-        <button id="subtract-button" class="calc-buttons-operation">-</button>
+        <button id="cuatro" onclick="clickCuatro();">4</button>
+        <button id="cinco" onclick="clickCinco();">5</button>
+        <button id="seis" onclick="clickSeis();">6</button>
+        <button id="restar" onclick="clickRestar();">-</button>
 
         <!-- CUARTO BLOQUE -->
-        <button id="one-button" class="calc-buttons-square" data-value="1">1</button>
-        <button id="two-button" data-value="2">2</button>
-        <button id="three-button" data-value="3">3</button>
-        <button id="add-button" class="calc-buttons-operation">+</button>
+        <button id="uno" onclick="clickUno();">1</button>
+        <button id="dos" onclick="clickDos();">2</button>
+        <button id="tres" onclick="clickTres();">3</button>
+        <button id="sumar" onclick="clickSumar();">+</button>
 
-        <!-- QUINTO BLOQUE -->
-        <button id="zero-button" data-value="0">0</button>
-        <button id="decimal-button" class="calc-buttons-square">,</button>
-        <button id="equals-button">=</button>
-
+        <button id="cero" onclick="clickCero();">0</button>
+        <button id="decimal" onclick="clickDecimal();">.</button>
+        <button id="igual" onclick="clickIgual();">=</button>
       </div>
     </div>
-    </div>
 
-    <!-- TABLA -->
-    <table class="calculadora">
-      <!-- <tr>
-        <td colspan="2"><span id="resultado"></span></td>
-      </tr> -->
-      <!-- <tr>
-        <td><button class="reset">C</button></td>
-        <td><button class="masmenos">+-</button></td>
-        <td><button class="porcentaje">%</button></td>
-        <td><button class="dividir">dividir</button></td>
-      </tr>
-      <tr>
-        <td><button class="siete">7</button></td>
-        <td><button class="ocho">8</button></td>
-        <td><button class="nueve">9</button></td>
-        <td><button class="por">X</button></td>
-      </tr>
-      <tr>
-        <td><button class="cuatro">4</button></td>
-        <td><button class="cinco">5</button></td>
-        <td><button class="seis">6</button></td>
-        <td><button class="menos">-</button></td>
-      </tr>
-      <tr>
-        <td><button class="uno">1</button></td>
-        <td><button class="dos">2</button></td>
-        <td><button class="tres">3</button></td>
-        <td><button class="mas">+</button></td>
-      </tr>
-      <tr>
-        <td><button class="cero">0</button></td>
-        <td><button class="coma">,</button></td>
-        <td><button class="igual">=</button></td>
-      </tr> -->
-      <!-- <tr>
-        <td><button id="siete">7</button></td>
-        <td><button id="ocho">8</button></td>
-        <td><button id="nueve">9</button></td>
-        <td><button id="division">/</button></td>
-      </tr> -->
-      <!-- <tr>
-        <td><button id="cuatro">4</button></td>
-        <td><button id="cinco">5</button></td>
-        <td><button id="seis">6</button></td>
-        <td><button id="multiplicacion">*</button></td>
-      </tr> -->
-      <!-- <tr>
-        <td><button id="uno">1</button></td>
-        <td><button id="dos">2</button></td>
-        <td><button id="tres">3</button></td>
-        <td><button id="resta">-</button></td>
-      </tr> -->
-      <!-- <tr>
-        <td><button id="igual">=</button></td>
-        <td><button id="reset">C</button></td>
-        <td><button id="cero">0</button></td>
-        <td><button id="suma">+</button></td>
-      </tr> -->
-    </table>
+    <!-- AUDIO CLICK A PULSAR UN BOTÓN -->
+    <audio id="audio" controls>
+      <source type="audio/wav" src="sonidos/click.mp3" />
+    </audio>
 
-    <!-- Llamada al js -->
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/modelo.js"></script>
+    <script src="js/calculadoraController.js"></script>
   </body>
 </html>
