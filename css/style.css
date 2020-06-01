@@ -1,110 +1,105 @@
-body {
-    background-color: black;
+html {
+    /* -webkit-font-smoothing: antialiased; */
+    /* box-sizing: border-box; */
 }
 
-#l-main {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: black;
+body {
+    background-color: #000000;
 }
 
 .calc {
-    background: lightgray;
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column;
+    display: block;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: black;
+    width: 252px;
+    /* height: 500px; */
 }
 
 .calc-display {
-    /* width: 300px; */
-    /* height: 80px; */
-    background: #202020;
-    color: #fff;
-    flex-grow: 1;
-    font-size: 10vw;
-    position: relative;
-}
-
-.calc-display .content {
-    bottom: 0.5vw;
-    position: absolute;
-    right: 4vw;
-    transform-origin: right bottom;
-}
-
-/* .bloque .calculadora {
-    display: block;
-    margin: 0px;
-} */
-
-.calc-buttons {
-    /* opacity: .9;
-    transition: opacity 0s;
-    background: lightgray;
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column; */
-    background: #000;
-    border: 0.8vw solid #000;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.calc-buttons>button {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    color: #000;
-    flex-basis: 25%;
-    font-size: 11vw;
-    font-weight: 100;
-    transition: opacity .6s;
-    border-radius: 0px;
+    background-color: black;
+    height: 90px;
+    color: white;
+    text-align: right;
+    line-height: 130px;
     margin: 0px;
 }
 
-.calc-buttons #zero-button {
-    flex-basis: 50%;
+#display {
+    /* background-color: transparent; */
+    margin: 5px;
+    font-size: 35px;
 }
 
-#divide-button {
-    background: linear-gradient(to bottom, #f89312 0%, #f89212 100%);
-    border-bottom: 0.5px solid #000;
+/* BOTONES */
+
+.btn-calc button {
+    /* display: flexbox;
+    flex-wrap: wrap; */
+    margin: 0px;
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    /* font-weight: 100; */
+    /* padding: 0px; */
+    /* background: rgb(209, 209, 209); */
+    /* border: 0.005vw solid rgb(158, 158, 158); */
+    /* border: 0.000001vw solid gray; */
+    /* border: 0.01px 0.01px solid gray; */
+    /* border: 0vw 0vh solid black; */
+    /*border: 0vw 0vh; */
+    /* -webkit-tap-highlight-color: rgba(155, 58, 58, 0); */
+    /* font-size: 3vw; */
+    /* transition: opacity .6s; */
+    /* flex-basis: 25%; */
 }
 
-#multiply-button {
-    background: linear-gradient(to bottom, #f89112 0%, #f78c11 100%);
-    /* border-bottom: 0.5px solid #000; */
-    /* padding-bottom: 2vw; */
+/* BOTONES DERECHOS EN NARANJA */
+
+#dividir {
+    background: orange;
+    color: white;
 }
 
-#subtract-button {
-    background: linear-gradient(to bottom, #f78d11 0%, #f68610 100%);
-    border-bottom: 0.5px solid #000;
-    font-size: 13vw;
-    font-weight: 100;
-    line-height: 0;
+#multiplicar {
+    background: orange;
+    color: white;
 }
 
-#add-button {
-    background: linear-gradient(to bottom, #f68710 0%, #f57f0f 100%);
-    border-bottom: 0.5px solid #000;
-    padding-bottom: 1vw;
+#restar {
+    background: orange;
+    color: white;
 }
 
-#equals-button {
-    background: linear-gradient(to bottom, #f58010 0%, #f58010 100%);
-    font-size: 10vw;
+#sumar {
+    background: orange;
+    color: white;
 }
 
-#zero-button, #decimal-button {
-    border-right: 1px solid #000;
+#igual {
+    background: orange;
+    color: white;
 }
 
-#zero-button {
-    padding-left: 36px;
+.multiplicar {
+    background: orange;
+    color: white;
 }
 
-#decimal-button {
-    /* font-size: 82px; */
-    padding-bottom: 28px;
+/* BOTÓN CERO OCUPA DOS BOTONES */
+
+#cero {
+    width: 124px;
+}
+
+/* EFECTO DE DESPLAZAMIENTO DEL BOTÓN */
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* EFECTO CLICK AL PULSAR UN BOTÓN */
+
+#audio {
+    display: none;
 }

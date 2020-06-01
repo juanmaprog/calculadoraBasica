@@ -1,0 +1,110 @@
+body {
+    background-color: black;
+}
+
+#l-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+}
+
+.calc {
+    background: lightgray;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+
+.calc-display {
+    /* width: 300px; */
+    /* height: 80px; */
+    background: #202020;
+    color: #fff;
+    flex-grow: 1;
+    font-size: 10vw;
+    position: relative;
+}
+
+.calc-display .content {
+    bottom: 0.5vw;
+    position: absolute;
+    right: 4vw;
+    transform-origin: right bottom;
+}
+
+/* .bloque .calculadora {
+    display: block;
+    margin: 0px;
+} */
+
+.calc-buttons {
+    /* opacity: .9;
+    transition: opacity 0s;
+    background: lightgray;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column; */
+    background: #000;
+    border: 0.8vw solid #000;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calc-buttons>button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #000;
+    flex-basis: 25%;
+    font-size: 11vw;
+    font-weight: 100;
+    transition: opacity .6s;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+.calc-buttons #zero-button {
+    flex-basis: 50%;
+}
+
+#divide-button {
+    background: linear-gradient(to bottom, #f89312 0%, #f89212 100%);
+    border-bottom: 0.5px solid #000;
+}
+
+#multiply-button {
+    background: linear-gradient(to bottom, #f89112 0%, #f78c11 100%);
+    /* border-bottom: 0.5px solid #000; */
+    /* padding-bottom: 2vw; */
+}
+
+#subtract-button {
+    background: linear-gradient(to bottom, #f78d11 0%, #f68610 100%);
+    border-bottom: 0.5px solid #000;
+    font-size: 13vw;
+    font-weight: 100;
+    line-height: 0;
+}
+
+#add-button {
+    background: linear-gradient(to bottom, #f68710 0%, #f57f0f 100%);
+    border-bottom: 0.5px solid #000;
+    padding-bottom: 1vw;
+}
+
+#equals-button {
+    background: linear-gradient(to bottom, #f58010 0%, #f58010 100%);
+    font-size: 10vw;
+}
+
+#zero-button, #decimal-button {
+    border-right: 1px solid #000;
+}
+
+#zero-button {
+    padding-left: 36px;
+}
+
+#decimal-button {
+    /* font-size: 82px; */
+    padding-bottom: 28px;
+}
